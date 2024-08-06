@@ -1,6 +1,9 @@
-<div class="topNav">
-    {% for tab in choices %}
-    <div class="">
-
-    </div>
+<div class="topNavContainer">
+    <ul class="topNav">
+        <li class="liMain"><a href="{{url_for('main')}}">Main Menu</a></li>
+        <li class="liMain"><a href="{{url_for('in_water')}}">In Water</a></li>
+        <li class="liMain"><a href="{{url_for('in_waterLatent')}}">Water Latent Heat</a></li>
+        <li class="liMain"><a href="{{url_for('in_contact')}}">In Contact</a></li>
+        <li class="liMain"><a href="{{url_for('mars')}}">Mars</a></li>
+    </ul>
 </div>

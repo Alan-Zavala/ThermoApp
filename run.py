@@ -14,14 +14,11 @@ if __name__ == '__main__':
 
         # add elements here
 
-        db.session.add()
-        db.session.commit()
-
-        for element_name in elements:
-            element = Element.query.filter_by(name=element_name).first()
-            if not element:
-                element = Element(name=element_name)
-                db.session.add(element)
+        # for element_name in elements:
+        #     element = Element.query.filter_by(name=element_name).first()
+        #     if not element:
+        #         element = Element(name=element_name)
+        #         db.session.add(element)
     
         db.session.commit()
         print("Categories populated successfully.")

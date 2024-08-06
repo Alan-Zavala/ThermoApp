@@ -2,15 +2,45 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>MainPage</title>
+    <title>Main Page</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
     <script src="https://kit.fontawesome.com/fdb8866bb6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="mainContainer">
-        {% inlcude partials/top_nav.html %}
-        <div class="Container">
-            
+    <div class="mainContainer">
+        <h1 class="mainPageHeader">Thermo Equilibrium Calculator</h1>
+        <hr>
+        <div class="row">
+            <div class="Content"> 
+                <a href="{{url_for('in_water')}}">      
+                    <div class="TitleContainer">
+                        <h3 class="MainPageTitle">In Water</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="Content">
+                <a href="{{url_for('in_waterLatent')}}">       
+                    <div class="TitleContainer">
+                        <h3 class="MainPageTitle"> In Water - Latent Heat</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="Content">     
+                <a href="{{url_for('in_contact')}}">  
+                    <div class="TitleContainer">
+                        <h3 class="MainPageTitle">In Contact </h3>
+                    </div>
+                </a>
+            </div>
+            <div class="Content">  
+                <a href="{{url_for('mars')}}">        
+                    <div class="TitleContainer">
+                        <h3 class="MainPageTitle">Mars Spaceship</h3>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </body>
