@@ -9,8 +9,25 @@
 <body>
     <div class="mainContainer">
         {% include 'partials/top_nav.html' %}
-        <div class="Container">
-            <p>form here</p>
+        <div class="row">
+            <div class="form_container">
+                <form action="" method="POST" class="IWForm">
+                    {{form.hidden_tag()}}
+                    {{form.m_water.label(class_="label")}}<div class="form_entry">{{form.m_water(class_="formInput")}}<p>kg</p></div>
+                    {{form.t_water.label(class_="label")}}<div class="form_entry">{{form.t_water(class_="formInput")}}<p>&deg;C</p></div>
+                    {{form.m_subject.label(class_="label")}}<div class="form_entry">{{form.m_subject(class_="formInput")}}<p>kg</p></div>
+                    {{form.c_subject.label(class_="label")}}<div class="form_entry">{{form.c_subject(class_="formInput")}}<p>J/(kg&deg;C)</p></div>
+                    {{form.t_subject.label(class_="label")}}<div class="form_entry">{{form.t_subject(class_="formInput")}}<p>&deg;C</p></div>
+                    {{form.submit(class_="appBtn")}}
+                </form>
+            </div>
+            <div class="result">
+                <h3>Results</h3>
+                <p>Here is the math</p>
+                <div class="formula">
+                    <p>&Delta;Q = c&Delta;T  </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

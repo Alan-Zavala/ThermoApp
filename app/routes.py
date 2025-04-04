@@ -2,7 +2,7 @@ from flask import render_template, session, request, redirect, url_for, flash, c
 from app import db
 from app.models import Element
 #from .calculations import in_water, in_contact
-#from app.forms import InWaterForm
+from app.forms import InWaterForm
 
 @app.route('/')
 def main():
@@ -10,10 +10,16 @@ def main():
 
 @app.route('/in_water', methods=['POST', 'GET'])
 def in_water():
-    #form = InWaterForm()
-    #water_temp = float(form.water_T.data)
+    form = InWaterForm()
+    if form.validate_on_submit():
+        # Create a new Product entry
+        
+        return redirect(url_for('calculate_result'))
+     
+    else:
+        flash('All fields are required.')
 
-    return render_template('in_water.html')
+    return render_template('in_water.html', form=form)
 
 @app.route('/in_waterLatent', methods=['POST', 'GET'])
 def in_waterLatent():
