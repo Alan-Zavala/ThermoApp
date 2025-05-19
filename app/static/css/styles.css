@@ -113,8 +113,13 @@ div.result p{
     font-size: 20px;
 }
 
+div.formula p.text{
+    text-indent: 30px;
+}
+
 div.result h3{
     font-size: 28px;
+    text-align: center;
 }
 
 div.row {
